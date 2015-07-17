@@ -1,0 +1,53 @@
+.vs-text-board{
+	height:2em;
+	display:inline-block;
+	text-align:right;
+	padding-right:2px;
+	padding-left:2px;
+
+	.text-board-char{
+		position:relative;
+		display:inline-block;
+		width:0.8em;
+		height:2em;
+		margin-left:1px;
+		overflow:hidden;
+
+		.text-board-char-viewport{
+			position:relative;
+			display:block;
+			width:0.8em;
+			height:2em*10;
+			-webkit-transition: margin-top 1s cubic-bezier(0, 0, 0, 1);
+			-o-transition: margin-top 1s cubic-bezier(0, 0, 0, 1);
+			transition: margin-top 1s cubic-bezier(0, 0, 0, 1);
+			
+		}
+
+		@for $i from 0 through 1000 {
+			&.char-#{$i} .text-board-char-viewport{
+				margin-top:-(2em * $i);
+			}
+		}
+		.single-char{
+			position:absolute;
+			-webkit-box-sizing: border-box;
+			-moz-box-sizing: border-box;
+			box-sizing: border-box;
+			padding-top:0.7em;
+			text-align:center;
+			top:0px;
+			width:0.8em;
+			height:2em;
+			left:0px;
+
+			@for $i from 0 through 1000 {
+				&.char-#{$i}{
+					top:(2em * $i);
+				}
+			}
+		}
+
+	}
+
+}
