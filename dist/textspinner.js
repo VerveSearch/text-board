@@ -22,30 +22,30 @@
 				if (idx !== -1){
 					this.items
 						.eq(i)
-						.attr('class','text-board-char')
+						.attr('class','text-spinner-char')
 						.addClass(clz+idx);
 				}else {
 					this.items
 						.eq(i)
-						.attr('class','text-board-char')
+						.attr('class','text-spinner-char')
 						.addClass('char-0');
 				}
 			}
 		},
 		addChar:function(){
 			var charEl = $('<div>')
-				.addClass('text-board-char')
+				.addClass('text-spinner-char')
 				.append($('<div>')
-					.addClass('text-board-char-viewport'))
+					.addClass('text-spinner-char-viewport'))
 				.appendTo(this.el);
 			this.addCharSetToChar(charEl);
 			return charEl;
 		},
 		removeChar:function(){
-			this.el.find('.text-board-char').first().remove();
+			this.el.find('.text-spinner-char').first().remove();
 		},
 		addCharSetToChar:function(charEl){
-			var viewportEl = charEl.children('.text-board-char-viewport'); 
+			var viewportEl = charEl.children('.text-spinner-char-viewport'); 
 			for(i=0,l=this.charSet.length;i<l;i++){
 				viewportEl.append($('<div>')
 							.addClass('single-char char-'+i)
@@ -56,7 +56,7 @@
 			var charEl,i,l,viewportEl;
 			if (!this.el){
 				this.el = $('<div>')
-					.addClass('vs-text-board')
+					.addClass('vs-text-spinner')
 					.appendTo(parentEl); 
 				for(i=0,l=this.places;i<l;i++){
 					this.addChar();
@@ -75,7 +75,7 @@
 					}
 				}
 			}
-			this.items = this.el.find('.text-board-char').reverse();
+			this.items = this.el.find('.text-spinner-char').reverse();
 		},
 		removeClass:function(clz){
 			this.el.removeClass(clz); 
