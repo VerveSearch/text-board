@@ -21,3 +21,4 @@ setTimeout(function(){
 ## Future work
 1. Look into removing jQuery as a dependencies (shouldn't be that difficult, just need to find the time to do it and write tests for it.)
 2. Adding animations for new places once created. 
+3. Add demos
