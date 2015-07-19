@@ -1,8 +1,7 @@
 <html>
 <head>
 <title>TextSpinner</title>
-  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" />
-  <link href="/stylesheets/print.css" media="print" rel="stylesheet" type="text/css" />
+  <link href="/dist/textspinner.min.css" media="screen, projection" rel="stylesheet" type="text/css" />
   <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
   <script type="text/javascript" src="/dist/textspinner.min.js"></script>
   <meta name="charset" content="UTF-8" />
@@ -11,7 +10,7 @@
   <div class="number-board">
   </div>
   <script type="text/javascript">
-    var num = new vs.TextBoard(5,'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz.:0123456789 \'";[]{}<>,/?`~§!@#$%^&*()-+=±');
+    var num = new vs.TextSpinner(5,'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz.:0123456789 \'";[]{}<>,/?`~§!@#$%^&*()-+=±');
     num.render($('.number-board'));
     num.setText('x = y + z;');
   </script>
