@@ -1,5 +1,32 @@
-(function($W,$D,$){
-	$W.Modernizr=function(a,b,c){function z(a){j.cssText=a}function A(a,b){return z(m.join(a+";")+(b||""))}function B(a,b){return typeof a===b}function C(a,b){return!!~(""+a).indexOf(b)}function D(a,b){for(var d in a){var e=a[d];if(!C(e,"-")&&j[e]!==c)return b=="pfx"?e:!0}return!1}function E(a,b,d){for(var e in a){var f=b[a[e]];if(f!==c)return d===!1?a[e]:B(f,"function")?f.bind(d||b):f}return!1}function F(a,b,c){var d=a.charAt(0).toUpperCase()+a.slice(1),e=(a+" "+o.join(d+" ")+d).split(" ");return B(b,"string")||B(b,"undefined")?D(e,b):(e=(a+" "+p.join(d+" ")+d).split(" "),E(e,b,c))}var d="2.8.3",e={},f=!0,g=b.documentElement,h="modernizr",i=b.createElement(h),j=i.style,k,l={}.toString,m=" -webkit- -moz- -o- -ms- ".split(" "),n="Webkit Moz O ms",o=n.split(" "),p=n.toLowerCase().split(" "),q={},r={},s={},t=[],u=t.slice,v,w=function(a,c,d,e){var f,i,j,k,l=b.createElement("div"),m=b.body,n=m||b.createElement("body");if(parseInt(d,10))while(d--)j=b.createElement("div"),j.id=e?e[d]:h+(d+1),l.appendChild(j);return f=["&#173;",'<style id="s',h,'">',a,"</style>"].join(""),l.id=h,(m?l:n).innerHTML+=f,n.appendChild(l),m||(n.style.background="",n.style.overflow="hidden",k=g.style.overflow,g.style.overflow="hidden",g.appendChild(n)),i=c(l,a),m?l.parentNode.removeChild(l):(n.parentNode.removeChild(n),g.style.overflow=k),!!i},x={}.hasOwnProperty,y;!B(x,"undefined")&&!B(x.call,"undefined")?y=function(a,b){return x.call(a,b)}:y=function(a,b){return b in a&&B(a.constructor.prototype[b],"undefined")},Function.prototype.bind||(Function.prototype.bind=function(b){var c=this;if(typeof c!="function")throw new TypeError;var d=u.call(arguments,1),e=function(){if(this instanceof e){var a=function(){};a.prototype=c.prototype;var f=new a,g=c.apply(f,d.concat(u.call(arguments)));return Object(g)===g?g:f}return c.apply(b,d.concat(u.call(arguments)))};return e}),q.csstransforms=function(){return!!F("transform")},q.csstransforms3d=function(){var a=!!F("perspective");return a&&"webkitPerspective"in g.style&&w("@media (transform-3d),(-webkit-transform-3d){#modernizr{left:9px;position:absolute;height:3px;}}",function(b,c){a=b.offsetLeft===9&&b.offsetHeight===3}),a};for(var G in q)y(q,G)&&(v=G.toLowerCase(),e[v]=q[G](),t.push((e[v]?"":"no-")+v));return e.addTest=function(a,b){if(typeof a=="object")for(var d in a)y(a,d)&&e.addTest(d,a[d]);else{a=a.toLowerCase();if(e[a]!==c)return e;b=typeof b=="function"?b():b,typeof f!="undefined"&&f&&(g.className+=" "+(b?"":"no-")+a),e[a]=b}return e},z(""),i=k=null,e._version=d,e._prefixes=m,e._domPrefixes=p,e._cssomPrefixes=o,e.testProp=function(a){return D([a])},e.testAllProps=F,e.testStyles=w,g.className=g.className.replace(/(^|\s)no-js(\s|$)/,"$1$2")+(f?" js "+t.join(" "):""),e}(this,this.document);
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Source: TextSpinner.js</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+
+    <h1 class="page-title">Source: TextSpinner.js</h1>
+
+    
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>(function($W,$D,$){
+	$W.Modernizr=function(a,b,c){function z(a){j.cssText=a}function A(a,b){return z(m.join(a+";")+(b||""))}function B(a,b){return typeof a===b}function C(a,b){return!!~(""+a).indexOf(b)}function D(a,b){for(var d in a){var e=a[d];if(!C(e,"-")&amp;&amp;j[e]!==c)return b=="pfx"?e:!0}return!1}function E(a,b,d){for(var e in a){var f=b[a[e]];if(f!==c)return d===!1?a[e]:B(f,"function")?f.bind(d||b):f}return!1}function F(a,b,c){var d=a.charAt(0).toUpperCase()+a.slice(1),e=(a+" "+o.join(d+" ")+d).split(" ");return B(b,"string")||B(b,"undefined")?D(e,b):(e=(a+" "+p.join(d+" ")+d).split(" "),E(e,b,c))}var d="2.8.3",e={},f=!0,g=b.documentElement,h="modernizr",i=b.createElement(h),j=i.style,k,l={}.toString,m=" -webkit- -moz- -o- -ms- ".split(" "),n="Webkit Moz O ms",o=n.split(" "),p=n.toLowerCase().split(" "),q={},r={},s={},t=[],u=t.slice,v,w=function(a,c,d,e){var f,i,j,k,l=b.createElement("div"),m=b.body,n=m||b.createElement("body");if(parseInt(d,10))while(d--)j=b.createElement("div"),j.id=e?e[d]:h+(d+1),l.appendChild(j);return f=["&amp;#173;",'&lt;style id="s',h,'">',a,"&lt;/style>"].join(""),l.id=h,(m?l:n).innerHTML+=f,n.appendChild(l),m||(n.style.background="",n.style.overflow="hidden",k=g.style.overflow,g.style.overflow="hidden",g.appendChild(n)),i=c(l,a),m?l.parentNode.removeChild(l):(n.parentNode.removeChild(n),g.style.overflow=k),!!i},x={}.hasOwnProperty,y;!B(x,"undefined")&amp;&amp;!B(x.call,"undefined")?y=function(a,b){return x.call(a,b)}:y=function(a,b){return b in a&amp;&amp;B(a.constructor.prototype[b],"undefined")},Function.prototype.bind||(Function.prototype.bind=function(b){var c=this;if(typeof c!="function")throw new TypeError;var d=u.call(arguments,1),e=function(){if(this instanceof e){var a=function(){};a.prototype=c.prototype;var f=new a,g=c.apply(f,d.concat(u.call(arguments)));return Object(g)===g?g:f}return c.apply(b,d.concat(u.call(arguments)))};return e}),q.csstransforms=function(){return!!F("transform")},q.csstransforms3d=function(){var a=!!F("perspective");return a&amp;&amp;"webkitPerspective"in g.style&amp;&amp;w("@media (transform-3d),(-webkit-transform-3d){#modernizr{left:9px;position:absolute;height:3px;}}",function(b,c){a=b.offsetLeft===9&amp;&amp;b.offsetHeight===3}),a};for(var G in q)y(q,G)&amp;&amp;(v=G.toLowerCase(),e[v]=q[G](),t.push((e[v]?"":"no-")+v));return e.addTest=function(a,b){if(typeof a=="object")for(var d in a)y(a,d)&amp;&amp;e.addTest(d,a[d]);else{a=a.toLowerCase();if(e[a]!==c)return e;b=typeof b=="function"?b():b,typeof f!="undefined"&amp;&amp;f&amp;&amp;(g.className+=" "+(b?"":"no-")+a),e[a]=b}return e},z(""),i=k=null,e._version=d,e._prefixes=m,e._domPrefixes=p,e._cssomPrefixes=o,e.testProp=function(a){return D([a])},e.testAllProps=F,e.testStyles=w,g.className=g.className.replace(/(^|\s)no-js(\s|$)/,"$1$2")+(f?" js "+t.join(" "):""),e}(this,this.document);
 	jQuery.fn.reverse = function(){
 		return $(Array.prototype.reverse.call(this));
 	};
@@ -7,7 +34,7 @@
      * @name TextSpinner
      * @constructor 
      * @param places {number} initial number of spinnable places 
-     * @param charSet {string|Array<string>} the character set provided as either a string or an array. 
+     * @param charSet {string|Array&lt;string>} the character set provided as either a string or an array. 
      * @description constructs a new TextSpinner widget instance 
      */ 
 	var TextSpinner = function(places,charSet){
@@ -23,7 +50,7 @@
          * @type property
          * @propertyOf TextSpinner
          * @description the character set to use
-         * @type {Array<string>}
+         * @type {Array&lt;string>}
          */ 
 		this.charSet = (typeof charSet === "string")?charSet.split(''):charSet;
 		/**
@@ -61,19 +88,19 @@
 				this.render(null,n.length);
 				this.places = n.length;
 			}
-			for(i=0,l=this.places;i<l;i++){
+			for(i=0,l=this.places;i&lt;l;i++){
 				idx = this.charSet.indexOf(n[i]); 
 				itm = this.items
 					.eq(i)
 					.children();
 				if (idx !== -1){
-					if (Modernizr.csstransforms && Modernizr.csstransforms3d){
+					if (Modernizr.csstransforms &amp;&amp; Modernizr.csstransforms3d){
 						itm.css('transform','translateZ(0) translateY('+(-idx*1.4)+'em)');
 					}else {
 						itm.css('margin-top',(-idx*1.4)+'em');
 					}
 				}else {
-					if (Modernizr.csstransforms && Modernizr.csstransforms3d){
+					if (Modernizr.csstransforms &amp;&amp; Modernizr.csstransforms3d){
 						itm.css('transform','translateZ(0)');
 					}else {
 						itm.css('margin-top','0'); 
@@ -88,9 +115,9 @@
          * @methodOf TextSpinner
          */
 		addChar:function(){
-			var charEl = $('<div>')
+			var charEl = $('&lt;div>')
 				.attr('class','text-spinner-char char-0')
-				.prepend($('<div>')
+				.prepend($('&lt;div>')
 					.addClass('text-spinner-char-viewport'))
 			this.addCharSetToChar(charEl);
 			charEl.appendTo(this.el);
@@ -114,8 +141,8 @@
          */
 		addCharSetToChar:function(charEl){
 			var viewportEl = charEl.children('.text-spinner-char-viewport'); 
-			for(i=0,l=this.charSet.length;i<l;i++){
-				viewportEl.append($('<div>')
+			for(i=0,l=this.charSet.length;i&lt;l;i++){
+				viewportEl.append($('&lt;div>')
 					.addClass('single-char char-'+i)
 					.css('top',(1.4*i)+'em')
 					.html(this.charSet[i]));
@@ -136,22 +163,22 @@
 			par = parentEl || $('body');
 			this.places = places || this.places;
 			if (!this.el){
-				this.el = $('<div>')
+				this.el = $('&lt;div>')
 					.addClass('vs-text-spinner')
 					.appendTo(parentEl); 
-				for(i=0,l=this.places;i<l;i++){
+				for(i=0,l=this.places;i&lt;l;i++){
 					this.addChar();
 				}
-			}else if (places && (places !== this.places)){
+			}else if (places &amp;&amp; (places !== this.places)){
 				var dif = places - this.places;
 				if (dif > 0){
 					//add places
-					for(i=this.places;i<places;i++){
+					for(i=this.places;i&lt;places;i++){
 						this.addChar();					
 					}
 				}else {
 					//remove places
-					for(i=0,l=Math.abs(dif);i<l;i++){
+					for(i=0,l=Math.abs(dif);i&lt;l;i++){
 						this.removeChar();
 					}
 				}
@@ -183,4 +210,26 @@
 
 	$W.vs = $W.vs || {};
 	$W.vs.TextSpinner = TextSpinner;
-})(window,document,jQuery); 
+})(window,document,jQuery); </code></pre>
+        </article>
+    </section>
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Index</a></h2><h3>Classes</h3><ul><li><a href="global.html#TextSpinner">TextSpinner</a></li></ul>
+</nav>
+
+<br clear="both">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.3.0-alpha5</a> on Sun Jul 19 2015 23:48:35 GMT+0100 (BST)
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>

@@ -14,7 +14,12 @@ var PATHS = {
 	}
 };
 
-gulp.task('compile', function() {
+gulp.task('jsdoc',function(){
+	return gulp.src([PATHS.JS.SRC,,'./README.md'])
+  	.pipe(jsdoc('./docs'));
+});
+
+gulp.task('compile',['jsdoc'],function() {
     return gulp.src(PATHS.JS.SRC)
       .pipe(jshint())
       .pipe(jshint.reporter(stylish))
