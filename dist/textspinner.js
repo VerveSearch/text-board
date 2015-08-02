@@ -91,7 +91,7 @@
 			var charEl = $('<div>')
 				.attr('class','text-spinner-char char-0')
 				.prepend($('<div>')
-					.addClass('text-spinner-char-viewport'))
+					.addClass('text-spinner-char-viewport'));
 			this.addCharSetToChar(charEl);
 			charEl.appendTo(this.el);
 			return charEl;
@@ -134,8 +134,8 @@
 		render:function(parentEl,places){
 			var charEl,i,l,viewportEl,
 			par = parentEl || $('body');
-			this.places = places || this.places;
 			if (!this.el){
+				this.places = places || this.places;
 				this.el = $('<div>')
 					.addClass('vs-text-spinner')
 					.appendTo(parentEl); 
@@ -144,10 +144,12 @@
 				}
 			}else if (places && (places !== this.places)){
 				var dif = places - this.places;
+				console.log(dif);
 				if (dif > 0){
 					//add places
 					for(i=this.places;i<places;i++){
-						this.addChar();					
+						this.addChar();		
+						console.log('add places');			
 					}
 				}else {
 					//remove places
