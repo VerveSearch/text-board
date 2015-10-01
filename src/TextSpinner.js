@@ -144,12 +144,10 @@
 				}
 			}else if (places && (places !== this.places)){
 				var dif = places - this.places;
-				console.log(dif);
 				if (dif > 0){
 					//add places
 					for(i=this.places;i<places;i++){
-						this.addChar();		
-						console.log('add places');			
+						this.addChar();
 					}
 				}else {
 					//remove places
